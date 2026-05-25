@@ -25,24 +25,23 @@
 
         /* Hero */
         .hero { background: linear-gradient(135deg, #0D47A1 0%, #1565C0 40%, #1976D2 100%); color: #fff; text-align: center; padding: 80px 24px 60px; position: relative; overflow: hidden; }
-        /* hero decorative overlay removed to fix click blocking */
-        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        .hero .tagline { font-size: 22px; opacity: 0.95; margin-bottom: 12px; font-weight: 300; }
-        .hero .sub-tagline { font-size: 16px; opacity: 0.8; margin-bottom: 36px; }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 10; }
+        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2); position: relative; z-index: 2; }
+        .hero .tagline { font-size: 22px; opacity: 0.95; margin-bottom: 12px; font-weight: 300; position: relative; z-index: 2; }
+        .hero .sub-tagline { font-size: 16px; opacity: 0.8; margin-bottom: 36px; position: relative; z-index: 2; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 2; }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; border-radius: 8px; font-size: 17px; font-weight: 600; transition: all 0.25s; cursor: pointer; border: none; }
         .btn-primary { background: #FF6F00; color: #fff; box-shadow: 0 4px 16px rgba(255,111,0,0.35); }
         .btn-primary:hover { background: #E65100; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,111,0,0.45); }
         .btn-secondary { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.4); backdrop-filter: blur(4px); }
         .btn-secondary:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
-        .version-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 13px; margin-top: 20px; }
+        .version-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 13px; margin-top: 20px; position: relative; z-index: 2; }
 
         /* Section common */
         .section { max-width: 1200px; margin: 0 auto; padding: 60px 24px; }
         .section-title { text-align: center; font-size: 32px; font-weight: 700; color: #1A237E; margin-bottom: 12px; }
         .section-desc { text-align: center; font-size: 16px; color: #666; margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-        /* Features */
+        /* Features - 5 items in 2 rows: 3+2 centered */
         .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .feature-card { background: #fff; border-radius: 12px; padding: 32px 24px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.25s, box-shadow 0.25s; }
         .feature-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
@@ -122,7 +121,7 @@
     <p class="tagline">专为英文软件界面设计的实时屏幕翻译工具</p>
     <p class="sub-tagline">本地词典零延迟 + 在线翻译记忆，越用越流畅</p>
     <div class="hero-buttons">
-        <a href="https://github.com/SmartLingo-Translate/smartlingo-website/releases/download/v2.3/SmartLingo.Translate.exe" download class="btn btn-primary">
+        <a href="https://github.com/SmartLingo-Translate/smartlingo-website/releases/download/v2.3/SmartLingo.Translate.exe" class="btn btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             免费下载
         </a>
@@ -137,30 +136,33 @@
     <p class="section-desc">三大翻译模式 + 本地词典 + 在线记忆，覆盖所有英文界面翻译场景</p>
     <div class="features-grid">
         <div class="feature-card">
-            <div class="feature-icon">🖱️</div>
+            <div class="feature-icon">&#128433;</div>
             <h3>悬停即译</h3>
             <p>鼠标悬停在英文界面上，实时翻译为中文显示。无需复制粘贴，所见即所译，零操作成本。</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">📐</div>
+            <div class="feature-icon">&#128208;</div>
             <h3>范围识别</h3>
             <p>框选识别区域，精准翻译多行文本。识别框大小可自定义调整，适配不同软件界面布局。</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">📸</div>
+            <div class="feature-icon">&#128248;</div>
             <h3>截图翻译</h3>
             <p>拖拽框选屏幕任意区域，截图后自动OCR识别并翻译。适合翻译图片、文档中的英文内容。</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">⚡</div>
+            <div class="feature-icon">&#9889;</div>
             <h3>本地词典零延迟</h3>
             <p>内置本地词典，常用词汇即时翻译无网络延迟。专业术语覆盖软件、技术、工程等领域。</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">🧠</div>
+            <div class="feature-icon">&#129504;</div>
             <h3>在线翻译记忆</h3>
             <p>在线翻译结果自动缓存为本地记忆，相同内容再次出现时直接命中，越用越快越准确。</p>
         </div>
+    </div>
+</section>
+
 <!-- Screenshots -->
 <section class="screenshots" id="screenshots">
     <div class="section">
@@ -224,11 +226,11 @@
         <h2 class="section-title">立即下载</h2>
         <p class="section-desc">单文件绿色版，无需安装，双击即用</p>
         <div class="download-info">
-            <a href="https://github.com/SmartLingo-Translate/smartlingo-website/releases/download/v2.3/SmartLingo.Translate.exe" download class="btn btn-primary" style="font-size:20px; padding:16px 48px;">
+            <a href="https://github.com/SmartLingo-Translate/smartlingo-website/releases/download/v2.3/SmartLingo.Translate.exe" class="btn btn-primary" style="font-size:20px; padding:16px 48px;">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
                 下载 SmartLingo Translate v2.3
             </a>
-            <div class="file-size">文件大小：约 140 MB（单文件版，托管于 GitHub Release）</div>
+            <div class="file-size">文件大小：约 140 MB（单文件绿色版，托管于 GitHub Release）</div>
             <div>
                 <span class="os-badge">Windows 10/11</span>
                 <span class="os-badge">64 位</span>
@@ -236,7 +238,7 @@
             </div>
             <div class="download-notice">
                 首次启动可能需要几秒钟解压时间，属正常现象。<br>
-                如 Windows 提示"未识别的应用"，请点击"更多信息" → "仍要运行"。<br>
+                如 Windows 提示"未识别的应用"，请点击"更多信息" > "仍要运行"。<br>
                 软件内置 Tesseract OCR 引擎 + 本地词典，离线即可翻译常用词汇。
             </div>
         </div>

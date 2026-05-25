@@ -25,11 +25,11 @@
 
         /* Hero */
         .hero { background: linear-gradient(135deg, #0D47A1 0%, #1565C0 40%, #1976D2 100%); color: #fff; text-align: center; padding: 80px 24px 60px; position: relative; overflow: hidden; }
-        .hero::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 70%); }
+        .hero::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none; }
         .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
         .hero .tagline { font-size: 22px; opacity: 0.95; margin-bottom: 12px; font-weight: 300; }
         .hero .sub-tagline { font-size: 16px; opacity: 0.8; margin-bottom: 36px; }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 10; }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; border-radius: 8px; font-size: 17px; font-weight: 600; transition: all 0.25s; cursor: pointer; border: none; }
         .btn-primary { background: #FF6F00; color: #fff; box-shadow: 0 4px 16px rgba(255,111,0,0.35); }
         .btn-primary:hover { background: #E65100; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,111,0,0.45); }
